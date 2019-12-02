@@ -1,3 +1,4 @@
+%%% @copyright 2019 Dániel Szoboszlay
 -module(a01).
 -export([ e1/0
         , e2/0
