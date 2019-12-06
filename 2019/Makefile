@@ -19,6 +19,9 @@ ebin/%.beam: src/%.erl | ebin
 ebin:
 	mkdir -p $@
 
+input/a05.term: input/a05.txt
+	sed 's/$$/]./g;s/^/[/g' $< > $@
+
 input/a03.term: input/a03.txt
 	sed 's/$$/}]./g;s/^/[{/g;s/,/},{/g;s/L/l,/g;s/U/u,/g;s/R/r,/g;s/D/d,/g' $< > $@
 
