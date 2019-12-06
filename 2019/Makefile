@@ -19,6 +19,9 @@ ebin/%.beam: src/%.erl | ebin
 ebin:
 	mkdir -p $@
 
+input/a06.term: input/a06.txt
+	sed 's/^\(.*\)[)]\(.*\)$$/{x\2, x\1}./' $< > $@
+
 input/a05.term: input/a05.txt
 	sed 's/$$/]./g;s/^/[/g' $< > $@
 
